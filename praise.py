@@ -55,7 +55,7 @@ class Praise(commands.Cog):
             embed.set_image(url=clap_gif_url)
 
             #praise_channel_id = int(os.getenv("PRAISE_CHANNEL_ID"))
-            praise_channel_id = int(os.getenv("TEST_CHANNEL_ID"))
+            praise_channel_id = int(os.getenv("PRAISE_CHANNEL_ID"))
             praise_channel = self.bot.get_channel(praise_channel_id)
 
             if praise_channel:
