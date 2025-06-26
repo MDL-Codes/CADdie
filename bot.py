@@ -18,7 +18,8 @@ async def on_ready():
 
 async def main():
     async with bot:
-        await bot.load_extension("praise")  # matches praise.py
+        await bot.load_extension("praise")
+        await bot.load_extension("qotw")
         await bot.start(TOKEN)
 
 import asyncio
