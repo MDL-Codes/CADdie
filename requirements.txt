@@ -2,3 +2,4 @@ discord.py==2.5.2
 python-dotenv==1.1.0
 giphy_client==1.0.0
 urllib3==1.26.6
+pytz
