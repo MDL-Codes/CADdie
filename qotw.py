@@ -7,13 +7,14 @@ import os
 class QOTW(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
         self.qotw_channel_id = int(os.getenv("QOTW_CHANNEL_ID"))
 
-        # Load questions and gifs
         self.questions = self.load_lines("questions.txt")
         self.gifs = self.load_lines("qotw_gifs.txt")
-        self.index = 0
+
+        # Index persistence
+        self.index_path = os.path.join(os.path.dirname(__file__), "qotw_index.txt")
+        self.index = self.load_index()
 
         self.send_question.start()
 
@@ -21,6 +22,16 @@ class QOTW(commands.Cog):
         path = os.path.join(os.path.dirname(__file__), file_name)
         with open(path, "r", encoding="utf-8") as f:
             return [line.strip() for line in f if line.strip()]
+
+    def load_index(self):
+        if os.path.exists(self.index_path):
+            with open(self.index_path, "r") as f:
+                return int(f.read().strip())
+        return 0
+
+    def save_index(self):
+        with open(self.index_path, "w") as f:
+            f.write(str(self.index))
 
     @tasks.loop(minutes=1)
     async def send_question(self):
@@ -42,6 +53,7 @@ class QOTW(commands.Cog):
             embed.set_image(url=self.gifs[self.index])
             await channel.send(embed=embed)
             self.index += 1
+            self.save_index()
         else:
             print("⚠️ Could not find the QOTW channel.")
 
