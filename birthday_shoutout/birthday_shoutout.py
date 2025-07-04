@@ -5,25 +5,30 @@ import pytz
 import random
 import os
 import csv
+import json
 
 class BirthdayShoutout(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.birthday_channel_id = int(os.getenv("TEST_CHANNEL_ID"))
-        self.birthdays = self.load_birthdays("birthdays.csv")
+        self.birthdays = self.load_birthdays_from_env()
         self.gifs = self.load_gifs("birthday_gifs.txt")
         self.shoutout_loop.start()
 
-    def load_birthdays(self, file_name):
-        path = os.path.join(os.path.dirname(__file__), file_name)
+
+    def load_birthdays_from_env(self):
+        data = os.getenv("BIRTHDAYS_JSON")
+        if not data:
+            return {}
+        
+        loaded = json.loads(data)
         birthdays = {}
-        with open(path, "r", encoding="utf-8") as f:
-            reader = csv.reader(f)
-            for row in reader:
-                if len(row) == 2:
-                    mention, date = row
-                    birthdays[date.strip()] = birthdays.get(date.strip(), []) + [mention.strip()]
+        for entry in loaded:
+            date = entry["date"]
+            mention = f"<@{entry['id']}>"
+            birthdays[date] = birthdays.get(date, []) + [mention]
         return birthdays
+
 
     def load_gifs(self, file_name):
         path = os.path.join(os.path.dirname(__file__), file_name)
