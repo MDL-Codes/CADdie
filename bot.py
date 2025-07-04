@@ -18,8 +18,9 @@ async def on_ready():
 
 async def main():
     async with bot:
-        await bot.load_extension("praise")
-        await bot.load_extension("qotw")
+        await bot.load_extension("praise.praise")
+        await bot.load_extension("qotw.qotw")
+        await bot.load_extension("birthday_shoutout.birthday_shoutout")
         await bot.start(TOKEN)
 
 import asyncio
