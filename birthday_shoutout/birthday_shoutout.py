@@ -10,7 +10,7 @@ import json
 class BirthdayShoutout(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.birthday_channel_id = int(os.getenv("TEST_CHANNEL_ID"))
+        self.birthday_channel_id = int(os.getenv("BIRTHDAY_CHANNEL_ID"))
         self.birthdays = self.load_birthdays_from_env()
         self.gifs = self.load_gifs("birthday_gifs.txt")
         self.shoutout_loop.start()
