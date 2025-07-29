@@ -36,7 +36,7 @@ class QOTW(commands.Cog):
     @tasks.loop(minutes=1)
     async def send_question(self):
         now = datetime.now(pytz.timezone("America/New_York"))
-        if now.strftime("%A %H:%M") == "Monday 17:00":
+        if now.strftime("%A %H:%M") == "Wednesday 17:00":
             if self.index < len(self.questions):
                 await self.send_qotw()
             else:
