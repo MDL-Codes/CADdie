@@ -124,5 +124,6 @@ If successful, you should see:
 CADdie#1234 is now running!
 ```
 
+---
 ### 🤝 Contributing
 Contributions are welcome! Feel free to fork this repo and submit pull requests.
