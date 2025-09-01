@@ -23,7 +23,7 @@ Built using **Python** and the **discord.py** library.
 - Automatically sends birthday wishes to members on their special day
 - Pulls from a JSON-formatted list of Discord user IDs and birthdates
 - Sends messages in a dedicated birthday channel
-![Birthday Screenshot](screenshots/birthday.png)
+![Birthday Screenshot](screenshots/bday.png)
 
 ### 💌 Praise Command
 - Users can give public shoutouts with:  
