@@ -17,14 +17,20 @@ Built using **Python** and the **discord.py** library.
 - Sends a fun or thoughtful question every **Wednesday at 5:00 PM EST**
 - Each question is paired with a unique GIF
 - Tracks which question was last sent to avoid repeats
-<img src="screenshots/qotw.png" alt="QOTW" width="500"/>
+<p align="center">
+  <img src="screenshots/qotw.png" alt="QOTW" width="350"/>
+</p>
+
 
 
 ### 🎂 Birthday Shoutouts
 - Automatically sends birthday wishes to members on their special day
 - Pulls from a JSON-formatted list of Discord user IDs and birthdates
 - Sends messages in a dedicated birthday channel
-<img src="screenshots/bday.png" alt="QOTW" width="300"/>
+<p align="center">
+  <img src="screenshots/bday.png" alt="BDAY" width="350"/>
+</p>
+
 
 
 ### 💌 Praise Command
@@ -32,7 +38,10 @@ Built using **Python** and the **discord.py** library.
   `!praise @user [your message here]`
 - Praise appears in a designated channel
 - Encourages positivity and community appreciation
-<img src="screenshots/praise.png" alt="QOTW" width="100"/>
+<p align="center">
+  <img src="screenshots/praise.png" alt="PRAISE" width="350"/>
+</p>
+
 
 
 ---
