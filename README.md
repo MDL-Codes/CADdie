@@ -46,8 +46,8 @@ Built using **Python** and the **discord.py** library.
 
 ---
 
-### 🧑‍💻 Contributors
-Made with ❤️ by the MDL Software Team
+## 🧑‍💻 Contributors
+### Made with ❤️ by the MDL Software Team
 
 ## 📁 Project Structure
 ```txt
