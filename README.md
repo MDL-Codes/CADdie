@@ -32,7 +32,7 @@ Built using **Python** and the **discord.py** library.
 ---
 
 ## 📁 Project Structure
-
+```txt
 caddie-bot/
 ├── bot.py
 ├── .env
@@ -50,6 +50,7 @@ caddie-bot/
 ├── qotw.png
 ├── birthday.png
 └── praise.png
+```
 
 
 ---
@@ -65,12 +66,16 @@ cd caddie-bot
 
 ### 2. Create and Activate a Virtual Environment
 # Windows
+```bash
 python -m venv venv
 .\venv\Scripts\activate
+```
 
 # macOS/Linux
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ### 3. Install Dependencies
 ```bash
@@ -88,7 +93,7 @@ PRAISE_CHANNEL_ID=your-praise-channel-id
 BIRTHDAYS_JSON=[{"id": "1234567890", "date": "MM-DD"}, {"id": "0987654321", "date": "MM-DD"}]
 ```
 
-## ⚠️ DO NOT commit your .env file. Add it to .gitignore.
+### ⚠️ DO NOT commit your .env file. Add it to .gitignore.
 
 ### 5. Run the Bot!
 ```bash
@@ -102,7 +107,5 @@ CADdie#1234 is now running!
 ### 🧑‍💻 Contributors
 Made with ❤️ by the MDL Software Team
 
-
-
-
-
+### 🤝 Contributing
+Contributions are welcome! Feel free to fork this repo and submit pull requests.
