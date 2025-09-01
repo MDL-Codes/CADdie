@@ -9,8 +9,13 @@
 
 Built using **Python** and the **discord.py** library.
 
+
 ---
 
+## 🧑‍💻 Contributors
+### Made with ❤️ by the MDL Software Team
+
+---
 ## ✨ Features
 
 ### 🧠 Question of the Week (QOTW)
@@ -44,12 +49,7 @@ Built using **Python** and the **discord.py** library.
 
 
 
----
 
-## 🧑‍💻 Contributors
-### Made with ❤️ by the MDL Software Team
-
----
 
 ## 📁 Project Structure
 ```txt
