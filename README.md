@@ -17,19 +17,25 @@ Built using **Python** and the **discord.py** library.
 - Sends a fun or thoughtful question every **Wednesday at 5:00 PM EST**
 - Each question is paired with a unique GIF
 - Tracks which question was last sent to avoid repeats
+![QOTW Screenshot](screenshots/qotw.png)
 
 ### 🎂 Birthday Shoutouts
 - Automatically sends birthday wishes to members on their special day
 - Pulls from a JSON-formatted list of Discord user IDs and birthdates
 - Sends messages in a dedicated birthday channel
+![Birthday Screenshot](screenshots/birthday.png)
 
 ### 💌 Praise Command
 - Users can give public shoutouts with:  
   `!praise @user [your message here]`
 - Praise appears in a designated channel
 - Encourages positivity and community appreciation
+![Praise Screenshot](screenshots/praise.png)
 
 ---
+
+### 🧑‍💻 Contributors
+Made with ❤️ by the MDL Software Team
 
 ## 📁 Project Structure
 ```txt
@@ -103,9 +109,6 @@ If successful, you should see:
 ```swift
 CADdie#1234 is now running!
 ```
-
-### 🧑‍💻 Contributors
-Made with ❤️ by the MDL Software Team
 
 ### 🤝 Contributing
 Contributions are welcome! Feel free to fork this repo and submit pull requests.
