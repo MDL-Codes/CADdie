@@ -14,6 +14,8 @@ Built using **Python** and the **discord.py** library.
 
 ## 🧑‍💻 Contributors
 ### Made with ❤️ by the MDL Software Team
+Kylie Gun - Lead Software Developer
+
 
 ---
 ## ✨ Features
