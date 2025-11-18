@@ -15,7 +15,10 @@ Built using **Python** and the **discord.py** library.
 ## 🧑‍💻 Contributors
 ### Made with ❤️ by the MDL Software Team
 Kylie Gun - Lead Software Developer
-
+Ronit Patel - Software Developer
+Resham Vani - Software Developer
+Elizabeth Cay - Software Developer
+Owen Loh - Software Developer
 
 ---
 ## ✨ Features
