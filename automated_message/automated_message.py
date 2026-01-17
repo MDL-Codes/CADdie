@@ -111,7 +111,8 @@ class ScheduleReminder(commands.Cog):
                 location = event["location"]
                 name_display = name.capitalize()
                 offset_minutes = int((event_dt - reminder_dt).total_seconds() // 60)
-                nice_time = self.format_time_12h(event_dt)
+                display_dt = event_dt - datetime.timedelta(hours=5)
+                nice_time = self.format_time_12h(display_dt)
                 message = (
                     f"Hey @everyone, as a reminder, {name_display} will be taking place "
                     f"in {offset_minutes} minutes at {nice_time} (Location: {location})"
