@@ -12,9 +12,9 @@ class ScheduleReminder(commands.Cog):
         self.bot = bot
         script_dir = os.path.dirname(__file__)
         self.schedule_file = os.path.join(script_dir, "schedule.xlsx")
-        channel_id_str = os.getenv("TEST_CHANNEL_ID")
+        channel_id_str = os.getenv("ANNOUNCEMENT_CHANNEL_ID")
         if not channel_id_str:
-            raise RuntimeError("TEST_CHANNEL_ID environment variable is not set.")
+            raise RuntimeError("ANNOUNCEMENT_CHANNEL_ID environment variable is not set.")
         self.announcement_channel_id = int(channel_id_str)
         self.schedule = self.load_schedule()
         self.check_events.start()
