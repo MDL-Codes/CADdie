@@ -22,6 +22,7 @@ async def main():
         await bot.load_extension("qotw.qotw")
         await bot.load_extension("birthday_shoutout.birthday_shoutout")
         await bot.load_extension("found.found")
+        await bot.load_extension("subteam_update.subteam_update")
         await bot.start(TOKEN)
 
 import asyncio
