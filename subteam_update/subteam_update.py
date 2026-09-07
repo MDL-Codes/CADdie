@@ -6,8 +6,8 @@ import os
 
 ET = pytz.timezone("America/New_York")
 
-# First Monday the update should go out; it then repeats every 2nd Monday.
-ANCHOR_MONDAY = date(2026, 7, 13)
+# First Wednesday the update should go out; it then repeats every 2nd Wednesday.
+ANCHOR_WEDNESDAY = date(2026, 9, 16)
 
 
 class SubteamUpdate(commands.Cog):
@@ -32,15 +32,15 @@ class SubteamUpdate(commands.Cog):
             f.write(value)
 
     def is_send_day(self, day):
-        # Every other Monday, anchored on ANCHOR_MONDAY.
-        return day.weekday() == 0 and (day - ANCHOR_MONDAY).days % 14 == 0
+        # Every other Wednesday, anchored on ANCHOR_WEDNESDAY.
+        return day.weekday() == 2 and (day - ANCHOR_WEDNESDAY).days % 14 == 0
 
     @tasks.loop(minutes=1)
     async def send_update_reminder(self):
         now = datetime.now(ET)
         today = now.date()
         today_str = today.isoformat()
-        # Fire once, any time from 18:00 onward on an "on" Monday. The window
+        # Fire once, any time from 18:00 onward on an "on" Wednesday. The window
         # (instead of an exact minute) means a restart near 18:00 won't lose it,
         # and last_sent makes sure it only goes out once that day.
         if self.is_send_day(today) and now.hour >= 18 and self.last_sent != today_str:
