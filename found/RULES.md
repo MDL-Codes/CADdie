@@ -14,7 +14,7 @@ Earn the most points by **spotting other members IRL** (or wherever they show up
 Post this in any channel:
 
 ```
-!found @person
+!social @person
 ```
 
 **You must attach a photo** as proof in the same message (`.png`, `.jpg`, `.jpeg`, `.gif`, or `.webp`).

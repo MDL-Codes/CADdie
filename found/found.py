@@ -77,16 +77,16 @@ class Found(commands.Cog):
     def is_admin_or_mod(self, member):
         return member.guild_permissions.administrator or member.guild_permissions.manage_guild
 
-    @commands.command(name="found")
+    @commands.command(name="social")
     async def found_cmd(self, ctx):
         try:
             attachment = ctx.message.attachments[0] if ctx.message.attachments else None
             if not attachment or not any(attachment.filename.lower().endswith(ext) for ext in IMAGE_EXTENSIONS):
-                await ctx.send("You need to include an image when using `!found`! 📸")
+                await ctx.send("You need to include an image when using `!social`! 📸")
                 return
 
             if not ctx.message.mentions:
-                await ctx.send("You need to mention someone! Usage: `!found @person`")
+                await ctx.send("You need to mention someone! Usage: `!social @person`")
                 return
 
             found_member = ctx.message.mentions[0]
@@ -255,7 +255,7 @@ class Found(commands.Cog):
         embed.add_field(
             name="🕹️ Log a sighting",
             value=(
-                "`!found @person` — **with a photo attached**.\n"
+                "`!social @person` — **with a photo attached**.\n"
                 "Your message gets reposted in the #found channel as proof."
             ),
             inline=False
